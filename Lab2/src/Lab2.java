@@ -5,9 +5,10 @@ public class Lab2 {
     public static void main (String [] args){
         //first example from lab instructions.
         String str = "{}{{{{}}";
-        String str2 = "{{{}}}"; // second example from lab instructions.
+        // second example from lab instructions.
+        String str2 = "{{{}}}";
         boolean ans = isBalanced(str); //replace with str2 when testing second example.
-        System.out.println("Answer " + ans); //should print false for str and true for str2.
+        System.out.println("Answer " + ans); //prints false for str and true for str2.
     }
 
     public static boolean isBalanced(String str){
