@@ -30,7 +30,11 @@ public class Lab2 {
                 r++; //increases if there is a right brace
             }
         }
-        if (l==r){ // returns true if there are an equal amount of left and right braces.
+
+        if (stack.isEmpty()){ // if an empty string is given (if str = "")
+            return false;
+        }
+        else if (l==r){ // returns true if there are an equal amount of left and right braces.
             return true;
         }
         else { // returns false if there is not an equal amount of left and right braces.
