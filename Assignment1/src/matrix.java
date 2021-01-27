@@ -27,7 +27,12 @@ public class matrix {
         //placeholder
         System.out.println(row*column);
         // create two arrays of size row and column and then fill the arrays with random integer values ranging from 0 to 50.
+
+        int [][] matrix1 = new int [row][column];
+        int [][] matrix2 = new int[row][column];
+
         
+
         // Then use matrix multiplication to find the product
         // insert a timer
         //ask the user if they want to play again.
