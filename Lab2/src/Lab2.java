@@ -4,7 +4,7 @@ public class Lab2 {
 
     public static void main (String [] args){
         //first example from lab instructions.
-        String str = "{}{{{{}}";
+        String str = "{{}}{";
         // second example from lab instructions.
         String str2 = "{{{}}}";
         boolean ans = isBalanced(str); //replace with str2 when testing second example.
@@ -31,10 +31,7 @@ public class Lab2 {
             }
         }
 
-        if (stack.isEmpty()){ // if an empty string is given (if str = "")
-            return false;
-        }
-        else if (l==r){ // returns true if there are an equal amount of left and right braces.
+        if (l==r){ // returns true if there are an equal amount of left and right braces.
             return true;
         }
         else { // returns false if there is not an equal amount of left and right braces.
