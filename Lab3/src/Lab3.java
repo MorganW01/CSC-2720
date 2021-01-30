@@ -21,7 +21,7 @@ public class Lab3 {
             }
         }
 
-        for (int j=0; j<s2.length();j++){
+        for (int j=0; j< s2.length(); j++){
             if (s2.charAt(j) == '#') {
                 s2_stack.pop();
             }
@@ -30,13 +30,21 @@ public class Lab3 {
             }
         }
 
-        if (s1_stack == s2_stack){
-            return true;
-        }
-        else {
+        String new_s1 = "";
+        String new_s2 = "";
 
-            return false;
+        while (!s1_stack.isEmpty()) {
+            new_s1 += s1_stack.peek();
+            s1_stack.pop();
+
         }
+
+        while (!s2_stack.isEmpty()) {
+            new_s2 += s2_stack.peek();
+            s2_stack.pop();
+        }
+
+        return new_s1.equals(new_s2);
 
     }
 
