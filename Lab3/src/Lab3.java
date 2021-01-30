@@ -6,6 +6,7 @@ public class Lab3 {
         //test strings s1 and s2
         String s1 = "DataStructuresIssss###Fun";
         String s2 = "DataStructuresIszwp###Fun";
+
         //boolean variable used to run the method
         boolean ans = backspaceCompare(s1,s2);
         System.out.println(ans); // Should be True
