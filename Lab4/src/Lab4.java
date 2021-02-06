@@ -2,6 +2,8 @@ import java.util.Stack;
 import java.util.LinkedList;
 import java.util.Queue;
 
+//Name: MORGAN WARREN
+
 /* A palindrome is a string of characters that reads the same from left to right as it does from right to left.
  * Write  a function called checkPalindrome that takes a string s1 and evaluate if the string is a palindrome
  * or not  using only a stack and a queue data structures. You should make use of the built-in java implementation of
