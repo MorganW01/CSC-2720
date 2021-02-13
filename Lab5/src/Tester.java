@@ -1,5 +1,8 @@
 public class Tester {
+    //NAME: MORGAN WARREN
+
     public static void main(String[] args) {
+        //Creates node objects and sets values to them.
         Node head = new Node(1);
         Node second = new Node(2);
         Node third = new Node(3);
@@ -30,10 +33,10 @@ public class Tester {
             head = head.next;
         }
         assert head.next != null;
-        head.next = head.next.next;
+        head.next = head.next.next; //replaces values to delete specified node
 
     }
-
+    // Node traversal and printing
     public static void printLinkedList(Node head) {
         for (Node cur = head; cur != null; cur = cur.next) {
             System.out.print(cur.item + " ");
