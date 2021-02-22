@@ -27,7 +27,8 @@ public class RingBuffer {
             }
             // insert element at the rear
             else {
-                queue[rear] = data; rear++; }
+                queue[rear] = data; rear++;
+            }
         }
 
         public static int dequeue (){
@@ -45,7 +46,6 @@ public class RingBuffer {
             else if (front == capacity-1){ //could be capacity*
                 front = 0;
 
-
             }
 
             dequeuedElement = queue[front];
@@ -57,10 +57,11 @@ public class RingBuffer {
         public static void printQueue () {
             int i;
             if (front == rear) {
-                System.out.print("The Ring Buffer is empty");
+                System.out.println("The Ring Buffer is empty");
             }
 
             // traverse front to rear and print elements
+            System.out.print("The elements in the Ring Buffer are: ");
             for (i = front; i < rear; i++) {
 
                 if (i<capacity -1){
@@ -74,26 +75,31 @@ public class RingBuffer {
 
 
         public static void main (String [] args){
-            RingBuffer ringBuffer = new RingBuffer(4);
+
+            //FIRST TEST:
+            RingBuffer ringBuffer1 = new RingBuffer(4);
             enqueue(1);
             enqueue(2);
             enqueue(3);
             enqueue(4);
-
-            //FIRST TEST:
-            System.out.println("Deleted element: "+ dequeue()); //Deleted element = 1
-            printQueue();
-            System.out.println("Deleted element: "+ dequeue()); //Deleted element = 2
             printQueue();
 
-            //SECOND TEST
+            System.out.println("Deleted element = "+ dequeue()); //Deleted element = 1
+            System.out.println("Deleted element = "+ dequeue()); //Deleted element = 2
+            printQueue();
+
+            //SECOND TEST:
+            RingBuffer ringBuffer2 = new RingBuffer(5);
+            enqueue(3);
+            enqueue(4);
+            enqueue(9);
+            enqueue(20);
             enqueue(5);
-            enqueue(6); //Ring Buffer is full
+            enqueue(1); // returns that the buffer is full when trying to add another value that's over the capacity
+            printQueue();
 
 
         }
-
-
 
 
 }
