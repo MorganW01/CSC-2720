@@ -6,9 +6,6 @@
 * */
 public class RingBuffer {
 
-
-    // Java program to implement a queue using an array
-
         private static int front, rear, capacity;
         private static int queue[];
 
@@ -18,10 +15,8 @@ public class RingBuffer {
             queue = new int[capacity];
         }
 
-        // function to insert an element at the rear of the queue
         public static void enqueue (int data) {
 
-            // check queue is full or not
             if (capacity == rear) {
                 System.out.println("The Ring Buffer is full");
             }
@@ -43,7 +38,7 @@ public class RingBuffer {
                 front=rear= -1;
             }
 
-            else if (front == capacity-1){ //could be capacity*
+            else if (front == capacity-1){
                 front = 0;
 
             }
@@ -100,7 +95,6 @@ public class RingBuffer {
 
 
         }
-
 
 }
 
