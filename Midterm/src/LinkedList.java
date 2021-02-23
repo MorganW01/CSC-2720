@@ -86,7 +86,7 @@ public class LinkedList {
         list.deleteNode(); //deletes the first element
         System.out.println(); //space
         printLinkedList(list); //prints list again
-        
+
     }
 
 
