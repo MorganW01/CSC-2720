@@ -90,6 +90,7 @@ public class RingBuffer {
             System.out.println("Deleted element = "+ dequeue()); //Deleted element = 2
             printRingBuffer();
 
+            System.out.println();
             //SECOND TEST:
             RingBuffer ringBuffer2 = new RingBuffer(5);
             enqueue(3);
