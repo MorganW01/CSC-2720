@@ -35,7 +35,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RingBuffer">
+  <component name="RunManager" selected="Application.LinkedList">
     <configuration name="LinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LinkedList" />
       <module name="Midterm" />
@@ -52,8 +52,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RingBuffer" />
         <item itemvalue="Application.LinkedList" />
+        <item itemvalue="Application.RingBuffer" />
       </list>
     </recent_temporary>
   </component>
