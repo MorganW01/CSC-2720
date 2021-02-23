@@ -7,9 +7,9 @@
 public class RingBuffer {
 
         private static int front, rear, capacity;
-        private static int queue[];
+        private static int[] queue;
 
-        RingBuffer (int c) {
+        private RingBuffer(int c) {
             front = rear = 0;
             capacity = c;
             queue = new int[capacity];
@@ -49,7 +49,7 @@ public class RingBuffer {
             return dequeuedElement;
         }
 
-        public static void printQueue () {
+        public static void printRingBuffer () {
             int i;
             if (front == rear) {
                 System.out.println("The Ring Buffer is empty");
@@ -77,11 +77,11 @@ public class RingBuffer {
             enqueue(2);
             enqueue(3);
             enqueue(4);
-            printQueue();
+            printRingBuffer();
 
             System.out.println("Deleted element = "+ dequeue()); //Deleted element = 1
             System.out.println("Deleted element = "+ dequeue()); //Deleted element = 2
-            printQueue();
+            printRingBuffer();
 
             //SECOND TEST:
             RingBuffer ringBuffer2 = new RingBuffer(5);
@@ -91,7 +91,7 @@ public class RingBuffer {
             enqueue(20);
             enqueue(5);
             enqueue(1); // returns that the buffer is full when trying to add another value that's over the capacity
-            printQueue();
+            printRingBuffer();
 
 
         }
