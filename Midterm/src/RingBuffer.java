@@ -12,7 +12,7 @@ public class RingBuffer {
         //creates empty int array called ringBuffer
         private static int[] ringBuffer;
 
-        private RingBuffer(int c) { //sets/initializes variables
+        private RingBuffer(int c) { //sets and initializes variables
             front = rear = 0;
             capacity = c;
             ringBuffer = new int[capacity];
@@ -79,7 +79,8 @@ public class RingBuffer {
         public static void main (String [] args){
 
             //FIRST TEST:
-            RingBuffer ringBuffer1 = new RingBuffer(4);
+            RingBuffer ringBuffer1 = new RingBuffer(4); //creates Ring Buffer of size 4
+            //adds values to the Ring Buffer
             enqueue(1);
             enqueue(2);
             enqueue(3);
@@ -90,9 +91,11 @@ public class RingBuffer {
             System.out.println("Deleted element = "+ dequeue()); //Deleted element = 2
             printRingBuffer();
 
-            System.out.println();
+            System.out.println(); //separates first and second test
+
             //SECOND TEST:
-            RingBuffer ringBuffer2 = new RingBuffer(5);
+            RingBuffer ringBuffer2 = new RingBuffer(5); //creates Ring Buffer of size 5
+            //adds values to the Ring Buffer
             enqueue(3);
             enqueue(4);
             enqueue(9);

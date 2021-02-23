@@ -7,14 +7,18 @@
 
 
 public class LinkedList {
+    //initializes head variable
     Node head;
     static class Node {
+        //initializes data variable
         int data;
+        //initializes next variable
         Node next;
+
         // Node Constructor
         Node(int d) {
-            data = d;
-            next = null;
+            data = d; //sets data variable to d
+            next = null; //sets next variable to null
         }
     }
 
@@ -32,7 +36,7 @@ public class LinkedList {
         Node placeholder = head;
         //checks to see if the LinkedList is empty.
         if (head == null){
-            System.out.println("This LinkedList is empty");
+            System.out.println("This LinkedList is empty"); //prints statement if it's empty
         }
 
         else {
