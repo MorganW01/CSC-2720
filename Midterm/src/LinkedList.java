@@ -56,7 +56,7 @@ public class LinkedList {
 
         System.out.println("The LinkedList is as follows: ");
 
-        //while loop will transverse thru the list as long as the current node is not null
+        //while loop will transverse through the list as long as the current node is not null
         while (currentNode != null) {
 
             // prints out the data at current node
