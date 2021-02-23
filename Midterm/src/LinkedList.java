@@ -28,15 +28,16 @@ public class LinkedList {
     }
 
     public void deleteNode(){
-        Node temp = head;
+        //sets temporary value equal to the head as a placeholder
+        Node placeholder = head;
         //checks to see if the LinkedList is empty.
         if (head == null){
             System.out.println("This LinkedList is empty");
         }
 
         else {
-            //sets head equal to the temp.next "deleting" the current head.
-            head = temp.next;
+            //sets head equal to the placeholder.next "deleting" the current head.
+            head = placeholder.next;
         }
 
     }
