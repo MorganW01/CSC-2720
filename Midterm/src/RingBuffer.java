@@ -4,6 +4,7 @@
 * 2/22/21
 * SECTION 018
 * */
+
 public class RingBuffer {
 
         private static int front, rear, capacity;

@@ -1,87 +1,93 @@
 /*
  * MORGAN WARREN
- * CSC 2720 MIDTERM QUESTION 1
+ * CSC 2720 MIDTERM QUESTION 2
  * 2/22/21
  * SECTION 018
  * */
 
 
-/*
-* [40 Points] Write a Java program to build a Linked List data structure from scratch. i.e. : writing
-your own LinkedList class. The most recently added element in the LinkedList is the head element.
-Your LinkedList should be able to do the following :
-a. Show that it consists of 5 integers of your choice, Indicating the head element.
-b. Show the remaining 4 elements of the LinkedList once you have deleted the old head element.
-c. Indicate the new head.
-* */
-
-
-
 public class LinkedList {
-
     Node head;
-
-
     static class Node {
-
         int data;
         Node next;
-
-        // Constructor
-        Node(int d)
-        {
+        // Node Constructor
+        Node(int d) {
             data = d;
             next = null;
         }
     }
 
+    public void addNode (int value){
+        //creates Node object and takes in value
+        Node newNode = new Node(value);
+        //sets the head variable to the value of newNode.next
+        newNode.next = head;
+        //head becomes the new node once the next value is added.
+        head = newNode;
+    }
 
-    public static void addNode (int value) {
+    public void deleteNode(){
+        Node temp = head;
+        //checks to see if the LinkedList is empty.
+        if (head == null){
+            System.out.println("This LinkedList is empty");
+        }
 
+        else {
+            //sets head equal to the temp.next "deleting" the current head.
+            head = temp.next;
+        }
 
     }
 
-    public static void deleteNode (int index) {
-
-
-
-
-
-    }
 
     public static void printLinkedList(LinkedList list) {
+        //currentNode is set to the head (the first value of the list)
         Node currentNode = list.head;
 
-        System.out.print("LinkedList: ");
+        //counts the number of elements in the list.
+        int numOfElements = 0;
 
-        // Traverse through the LinkedList
+        System.out.println("The LinkedList is as follows: ");
+
+        //while loop will transverse thru the list as long as the current node is not null
         while (currentNode != null) {
-            // Print the data at current node
+
+            // prints out the data at current node
             System.out.print(currentNode.data + " ");
 
-            // Go to next node
+            // proceeds to the next node
             currentNode = currentNode.next;
+            numOfElements++; //numElements increases as the while loop goes.
         }
+        System.out.println();
+        //prints number of elements
+        System.out.println("This linked list consists of: " + numOfElements +" elements");
+        //prints the head
+        System.out.println("The head of this LinkedList is: " + list.head.data);
+
+
     }
-
-
 
     public static void main (String [] args) {
 
-        LinkedList newList = new LinkedList();
+        LinkedList list = new LinkedList();
 
-        printLinkedList(newList);
+        //adds node values to the list.
+        list.addNode(0);
+        list.addNode(1);
+        list.addNode(2);
+        list.addNode(3);
+        list.addNode(4); // most recent entry is the head
 
 
-
-
-
+        printLinkedList(list); //prints the list
+        list.deleteNode(); //deletes the first element
+        System.out.println(); //space
+        printLinkedList(list); //prints list again
+        
     }
-
-
-
-
-
 
 
 }
