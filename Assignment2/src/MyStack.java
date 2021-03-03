@@ -1,3 +1,11 @@
+/*
+* Morgan Warren
+* CSC 2720 Section 018
+* Assignment 2
+* 3/3/21
+* */
+
+
 class MyStack {
     private static final int MAXIMUM = 500;
     private int top;
