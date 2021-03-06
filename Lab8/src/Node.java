@@ -15,7 +15,6 @@ class BinarySearchTree {
 
     // Constructor
     BinarySearchTree() {
-
         root = null;
     }
 
@@ -58,7 +57,7 @@ class BinarySearchTree {
             return;
         }
 
-        else {
+        else { // if the node isn't null
             this.kthLargestUtil(node.right, k, C);
 
             C.c++;
@@ -72,17 +71,18 @@ class BinarySearchTree {
     }
 
     // Method to find the kth largest no in given BST
-
     void kthLargest(int k) {
         Count c = new Count(); // object of class count
         this.kthLargestUtil(this.root, k, c);
 
     }
 
-    // Driver function
+    //main method
     public static void main(String[] args){
-
+        //BinarySearchTree object
         BinarySearchTree tree = new BinarySearchTree();
+
+        //inserts all elements of the tree
         tree.insert(50);
         tree.insert(30);
         tree.insert(20);
@@ -91,8 +91,9 @@ class BinarySearchTree {
         tree.insert(60);
         tree.insert(80);
 
-
+        //sets k
         int k = 3;
+        //finds kth largest node
         tree.kthLargest(k);
     }
 
