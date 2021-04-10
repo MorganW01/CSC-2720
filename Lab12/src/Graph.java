@@ -29,7 +29,9 @@ public class Graph {
         }
     }
     public static Integer[][] generateAdjMatrix(Graph g){
+        //creates new integer array for adjacency matrix
         Integer[][] adjacencyMatrix = new Integer[g.numVertices][g.numVertices];
+        //for loop that fills the adjacency matrix
         for (int i=0; i<adjacencyMatrix.length; i++){
             for (int j=0; j<adjacencyMatrix[i].length; j++){
                 adjacencyMatrix[i][j]=0;
@@ -42,10 +44,11 @@ public class Graph {
             }
 
         }
+        //returns complete matrix
         return adjacencyMatrix;
     }
     public static void printMatrix(Integer[][] adjMatrix){
-
+        //for loop that iterates thru the matrix and prints it
         for (int i =0;i<adjMatrix.length;i++){
             for (int j=0;j<adjMatrix[i].length;j++){
                 System.out.print(adjMatrix[i][j]+" ");
