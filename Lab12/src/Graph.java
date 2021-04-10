@@ -28,25 +28,44 @@ public class Graph {
             else System.out.println();
         }
     }
-    public static Integer[][] generateAdjMatrix(){
-        Integer[][] adjacencyMatrix = null;
-        // INSERT CODE HERE
+    public static Integer[][] generateAdjMatrix(Graph g){
+        Integer[][] adjacencyMatrix = new Integer[g.numVertices][g.numVertices];
+        for (int i=0; i<adjacencyMatrix.length; i++){
+            for (int j=0; j<adjacencyMatrix[i].length; j++){
+                adjacencyMatrix[i][j]=0;
+            }
+        }
+
+        for (int i = 0; i<g.numVertices; i++) {
+            for (int j =0; j<g.adjacencyList[i].size();j++){
+                adjacencyMatrix[i][g.adjacencyList[i].get(j)]=1;
+            }
+
+        }
         return adjacencyMatrix;
     }
     public static void printMatrix(Integer[][] adjMatrix){
-        // INSERT CODE HERE
+
+        for (int i =0;i<adjMatrix.length;i++){
+            for (int j=0;j<adjMatrix[i].length;j++){
+                System.out.print(adjMatrix[i][j]+" ");
+            }
+            System.out.println();
+        }
     }
     public static void main(String[] args) {
         // Create a graph of 5 vertices
         Graph g2 = new Graph(5);
-        g2.addEdge(0, 1); g2.addEdge(0,
-                4); g2.addEdge(0, 3);
-        g2.addEdge(2, 0); g2.addEdge(3,
-                2); g2.addEdge(4, 3);
+        g2.addEdge(0, 1);
+        g2.addEdge(0, 4);
+        g2.addEdge(0, 3);
+        g2.addEdge(2, 0);
+        g2.addEdge(3, 2);
+        g2.addEdge(4, 3);
         g2.addEdge(4, 1);
         g2.printGraph();
 
-        Integer[][] adjMatrix = generateAdjMatrix();
+        Integer[][] adjMatrix = generateAdjMatrix(g2);
         printMatrix(adjMatrix);
 /* Should print the following Matrix
 
@@ -57,5 +76,6 @@ public class Graph {
 01010
 
 */
+
     }
 }
