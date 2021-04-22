@@ -1,3 +1,11 @@
+//Morgan Warren
+/* CSC 2720 Assignment 3
+* Section 018
+* 4/21/2021
+* */
+
+
+
 public class InventoryTester {
     //Driver Code
     public static void main(String[] args) {
