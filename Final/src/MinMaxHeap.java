@@ -6,9 +6,9 @@
 * */
 public class MinMaxHeap {
 
-    public void sort(int array[]) {
+    public void rearrangeHeap (int array[]) {
         int n = array.length;
-        // Build heap (rearrange array)
+        // rearrange array to max heap
         for (int i = n / 2 - 1; i >= 0; i--)
             heapify(array, n, i);
 
@@ -40,20 +40,21 @@ public class MinMaxHeap {
     }
 
     public static void main(String [] args){
-
+        //creates min heap array
         int[] array = {3, 5, 9, 6, 8, 20, 10, 12, 18, 9};
 
-        MinMaxHeap x = new MinMaxHeap();
+        //creates MinMaxHeap object
+        MinMaxHeap object = new MinMaxHeap();
 
-        System.out.println("Min Heap Array: ");
+        System.out.println("Min Heap Array: "); //prints original min heap
         for (int value : array) {
             System.out.print(value + " ");
         }
 
         System.out.println();
-        x.sort(array);
+        object.rearrangeHeap(array); //sorts and converts to max heap
 
-        System.out.println("Max Heap Array: ");
+        System.out.println("Max Heap Array: "); //prints sorted max heap
         for (int value : array) {
             System.out.print(value + " ");
         }
